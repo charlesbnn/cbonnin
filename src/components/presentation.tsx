@@ -18,7 +18,7 @@ export default function Presentation() {
                     <Image className="mt-[7px] w-[70px]" src="/images/front_icon.svg" width={70} height={70} alt="front-end icon" aria-label="front-end developer"/>
                 </div>
                 <h3>Front-end</h3>
-                <p>Je crée des applications à l'ergonomie simple en ayant à coeur l'expréience utilisateur et l'accessibilité.</p>
+                <p>Je crée des applications à l&apos;ergonomie simple en ayant à coeur l&apos;expréience utilisateur et l&apos;accessibilité.</p>
                 </li>
             </ul>
             <ul className="card__pres w-1/2 p-4">
@@ -27,7 +27,7 @@ export default function Presentation() {
                         <Image className="mt-[20px] w-[70px]" src="/images/back_icon.svg" width={70} height={70} alt="back-end icon" aria-label="back-end developer" />
                     </div>
                     <h3>Back-end</h3>
-                    <p>Je suis spécialisé en PHP/Symfony. J'adore créer des applications complexes en utilisant ces langages</p>
+                    <p>Je suis spécialisé en PHP/Symfony. J&apos;adore créer des applications complexes en utilisant ces langages</p>
                 </li>
             </ul>
             <ul className="card__pres w-1/2 p-4">
@@ -36,7 +36,7 @@ export default function Presentation() {
                     <Image className="mt-[9px] w-[70px]" src="/images/clean_code_icon.svg"  width={70} height={70}  alt="clean code icon" aria-label="clean code importance"/>
                 </div>
                 <h3>Clean code</h3>
-                <p>L'écriture de code maintenable est importante pour moi, je suis les règles et modèles de code des application sur lesquelles je travaille.</p>
+                <p>L&apos;écriture de code maintenable est importante pour moi, je suis les règles et modèles de code des application sur lesquelles je travaille.</p>
                 </li>
             </ul>
             <ul className="card__pres w-1/2 p-4">
@@ -45,7 +45,7 @@ export default function Presentation() {
                     <Image  className="mt-[5px] w-[80px]" src="/images/team_icon.svg" width={80} height={80} alt="team player icon" aria-label="team player"/>
                 </div>
                     <h3>Team Player</h3>
-                    <p>J'utilise des outils de versionning et connais peu ou prou la CI/CD. Je suis un adepte de la méthodologie Agile.</p>
+                    <p>J&apos;utilise des outils de versionning et connais peu ou prou la CI/CD. Je suis un adepte de la méthodologie Agile.</p>
                 </li>
             </ul>
             </article>

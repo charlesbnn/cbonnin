@@ -3,8 +3,8 @@ import { useEffect,useRef,useState } from "react";
 
 export default function Svghome(){
     const svgColor = '#000764';
-    const svgContainer = useRef(null);
-    const sourceRef = useRef(null);
+    const svgContainer =  useRef<SVGSVGElement | null>(null);
+    const sourceRef = useRef<HTMLDivElement | null>(null);
     const targetRef = useRef(null);
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -15,17 +15,17 @@ export default function Svghome(){
         let resizeObserver: ResizeObserver | null = null; // Declare with proper scope
         if (sourceRef.current) {
             resizeObserver = new ResizeObserver(() => {
-                const newWidth = sourceRef.current.offsetWidth;
-                const newHeight = sourceRef.current.offsetHeight +3 ;
+                const newWidth = sourceRef.current?.offsetWidth ?? 0;
+                const newHeight = (sourceRef.current?.offsetHeight ?? 0) + 3;
                 setWidth(newWidth);
                 setHeight(newHeight);
             });
 
             resizeObserver.observe(sourceRef.current);
         }
-        const paths = svgContainer.current.querySelectorAll("path");
+        const paths = svgContainer.current?.querySelectorAll("path");
         let time = 0;
-        paths.forEach((path:Element,index:number) => {
+        paths?.forEach((path:Element,index:number) => {
             time = index === 0 ? 1: 100*(index/2);
             if(index >6){
                 time = 300*(index/2)

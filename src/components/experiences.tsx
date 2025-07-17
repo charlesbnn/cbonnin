@@ -17,7 +17,7 @@ export default function Experiences() {
     { periode : '2022',
       titre : 'Consultant développeur',
       nom: 'Wevii - Agence de services et de paiements',
-      image:"/images/wevii.svg",
+      image:"/images/logo_wevii.svg",
       details: [
         'J\'ai travaillé sur l\'application du chomage partiel en tant que consultant.',
       ],
@@ -40,15 +40,23 @@ export default function Experiences() {
   return (
     <>
     <section id="experiences" className="border__software  mb-8 bg-window px-2 flex items-center flex-col nowrap ">
-        <h2 className="heading__vivid p-4 w-full">Éxperiences</h2>
-        {experiences.map((exp,idx) => (
+        <h2 className="heading__vivid p-4 w-full">Experiences</h2>
+        {experiences.map((exp) => (
           <article key={exp.key} className="art__experience w-full px-4 py-8 flex flex-row max-height-[10rem]">
-               {idx % 2 === 0 ? (
+               
             <>
               <div className="exp__infos w-1/2 text-right px-6 tiret">
+                <div className="exp__titre font-bold">{exp.titre}</div>
                 <div className="exp__periode">{exp.periode}</div>
-                <div className="exp__titre">{exp.titre}</div>
-              </div>
+                <Image
+                      src={exp.image}
+                      alt={exp.nom}
+                      width={80}
+                      height={80}
+                      title={exp.nom}
+                      className="inline-block h-full"
+                    />    
+                </div>
               <div className="exp__details w-1/2 px-6">
                 <ul className="exp__detailsList">
                   {exp.details.map((detail, dIdx) => (
@@ -56,28 +64,9 @@ export default function Experiences() {
                   ))}
                 </ul>
               </div>
-              <div className="exp__icon">
-
-              </div>
+              <div className="exp__icon"></div>
             </>
-          ) : (
-            <>
-              <div className="exp__details  w-1/2 text-right px-6 tiret">
-                <ul className="exp__detailsList">
-                  {exp.details.map((detail, dIdx) => (
-                    <li key={dIdx}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="exp__infos w-1/2 px-6">
-                <div className="exp__periode">{exp.periode}</div>
-                <div className="exp__titre">{exp.titre}</div>
-              </div>
-              <div className="exp__icon">
-
-              </div>
-            </>
-          )}
+          
           </article>
         ))}
     </section>

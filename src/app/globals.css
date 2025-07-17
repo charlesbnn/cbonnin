@@ -225,6 +225,12 @@ p,ul,li{
   top: 70px;
   z-index: 50;
 }
+.exp__infos{
+    font-family: "Panchang";
+}
+/* .exp__infos:first-child{
+  font-weight: bold;
+} */
 .exp__icon{
   position: absolute;
   width: 30px;
