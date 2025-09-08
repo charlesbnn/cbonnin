@@ -1,7 +1,8 @@
 import Image from "next/image";
+type ExperiencesProps = React.ComponentPropsWithoutRef<"section">;
 
 
-export default function Experiences() {
+export default function Experiences({ className }: ExperiencesProps) {
 
   const experiences = [
     { periode : '2023-2025',
@@ -39,7 +40,7 @@ export default function Experiences() {
 
   return (
     <>
-    <section id="experiences" className="border__software  mb-8 bg-window px-2 flex items-center flex-col nowrap ">
+    <section id="experiences" className={`border__software  mb-8 bg-window px-2 flex items-center flex-col nowrap ${className ?? ""}`}>
         <h2 className="heading__vivid p-4 w-full">Experiences</h2>
         {experiences.map((exp) => (
           <article key={exp.key} className="art__experience w-full px-4 py-8 flex flex-row max-height-[10rem]">

@@ -242,7 +242,12 @@ p,ul,li{
   margin-top: 1px;
   z-index: 60;
 }
-
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
+}
+.hidden{
+  opacity: 0;
+}
 @keyframes growUpProject {
   from {
     transform: translateY(0px);
@@ -273,3 +278,14 @@ p,ul,li{
       transform: translateY(50px)
   }
 }
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+

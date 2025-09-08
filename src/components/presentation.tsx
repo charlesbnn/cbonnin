@@ -1,9 +1,9 @@
 import Image from "next/image";
-
-export default function Presentation() {
+type PresentationProps = React.ComponentPropsWithoutRef<"section">;
+export default function Presentation({ className }: PresentationProps) {
     return (
     <>
-        <section id="presentation" className="grid grid-cols-1 justify-items-center  md:grid-cols-3 gap-y-10 md:gap-8 mx-auto mb-8 foreground" >
+        <section id="presentation" className={`grid grid-cols-1 justify-items-center md:grid-cols-3 gap-y-10 md:gap-8 mx-auto mb-8 foreground ${className ?? ""}`} >
             <article className="grid-cols-3 md:grid-cols-1 mx-auto border__software bg-window p-4">
             <h2 className="heading__vivid h-[38px] px-4" >Bonjour!</h2>
             <Image className="m-auto p-2 my-4" src="/images/pfp.jpg" alt="photo de moi" width={300} height={300} />

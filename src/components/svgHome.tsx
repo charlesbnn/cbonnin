@@ -26,9 +26,9 @@ export default function Svghome(){
         const paths = svgContainer.current?.querySelectorAll("path");
         let time = 0;
         paths?.forEach((path:Element,index:number) => {
-            time = index === 0 ? 1: 100*(index/2);
+            time = index === 0 ? 1: 100*(index/3);
             if(index >6){
-                time = 300*(index/2)
+                time = 300*(index/3)
             }
             setTimeout(()=>{
                 path.classList.add('show');
@@ -40,7 +40,7 @@ export default function Svghome(){
             webDiv?.classList.add('animateHeightDown');
             hider?.parentElement?.removeChild(hider);
         },time+200 )
-        
+        console.log(time);
     return () => {
         resizeObserver?.disconnect();
     };

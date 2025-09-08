@@ -1,7 +1,8 @@
 'use client';
 import Image from "next/image";
 
-export default function Projets() {
+type ProjetsProps = React.ComponentPropsWithoutRef<"section">;
+export default function Projets({ className }: ProjetsProps) {
   type StackKey = 'symfony' | 'php' | 'jquery' | 'mysql' | 'doctrine' | 'bootstrap' | 'figma' | 'db2';
   const stacks : Record<StackKey, { image: string; name: string; key: string }> ={
     symfony: 
@@ -145,7 +146,7 @@ export default function Projets() {
   return (
     <section
       id="projets"
-      className="border__software mb-8 bg-window flex flex-wrap p-2 justify-center items-center md:align-center lg:justify-between flex-col md:flex-row"
+      className={`border__software mb-8 bg-window flex flex-wrap p-2 justify-center items-center md:align-center lg:justify-between flex-col md:flex-row ${className ?? ""}`}
     >
       <h2 className="p-4 heading__vivid w-full">Projets</h2>
 
