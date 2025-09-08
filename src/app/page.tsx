@@ -15,7 +15,7 @@ useEffect(() => {
     <>
       <Header className={ready ? "fadeInUp-animation" : "hidden"}/>
       <Svghome/>
-      <main className=" md:max-w-[1600px] m-auto relative md:top-[23vh] mx-auto" >
+      <main className=" md:max-w-[1600px] m-auto relative top-[8vh] md:top-[23vh] mx-auto" >
         <Presentation className={ready ? "fadeInUp-animation" : "hidden"}/>
       
         <Projets className={ready ? "fadeInUp-animation" : "hidden"} />

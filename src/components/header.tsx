@@ -2,7 +2,7 @@ type HeaderProps = React.ComponentPropsWithoutRef<"header">;
 
 export default function Header({className} : HeaderProps){
     return (
-    <header className={`flex w-full justify-around order-3 flex-row absolute top-[7rem] md:top-[16rem] ${className ?? ""}`}>
+    <header className={`flex w-full justify-around order-3 flex-row absolute top-[7rem] md:top-[18rem] ${className ?? ""}`}>
         <ul className="flex w-full justify-around flex-row">
           <li><p>Développeur free-lance</p></li>
           <li><p>Bordeaux</p><p>FRANCE</p></li>
